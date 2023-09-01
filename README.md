@@ -91,3 +91,7 @@ imprime_grafo({nome_do_grafo}); Desenha na tela o grafo desejado.
 {nome_grafo}.imprime_caminho_mais_curto({vertice1, vertice2}); Acha o caminho mais curto entre os dois vértices passados e desenha na tela esse caminho mais curto.
 ```
 
+# Video
+
+Apresentação da linguagem: [Apresentação da linguagem Grafos
+](https://www.youtube.com/watch?v=5PG9bOeSAm4&ab_channel=MiguelGon%C3%A7alvesVieira).
