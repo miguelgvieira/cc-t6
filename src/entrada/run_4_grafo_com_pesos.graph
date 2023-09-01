@@ -1,0 +1,13 @@
+# TESTE 1
+# O resultado é um grafo, será impresso no terminal e desenhado.
+# Ele contém arestas com peso e sem pesos.
+
+grafo b = {
+  vertice a=10, b=5, c=1, d=7, e=15, f=1, g=3;
+  aresta (a>b, 5), (b>c, 10), (c>d, 10), (d>e,11), (e>f,13), (f>g,2), (d>g,8);
+};
+# aresta (a>b), (b>c), (c>d), (d>e), (e>f), (f>g), (d>g);
+
+imprime_estrutura( b);
+
+imprime_grafo(b);

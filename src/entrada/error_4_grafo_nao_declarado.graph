@@ -1,0 +1,13 @@
+# CASO DE TESTE ERRO 4
+# Criamos um grafo, e tentamos adicionar uma aresta em um grafo não existente.
+
+grafo b = {
+  vertice a=10, b, c, d, e, f, g;
+  aresta (a>b, 5), (b>c), (c>d, 10), (d>e), (e>f), (f>g), (d>g);
+};
+
+a.adiciona_vertice(j);
+
+imprime_estrutura( b);
+
+imprime_grafo(b);

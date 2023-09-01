@@ -1,0 +1,10 @@
+# TESTE 1
+# Cria um grafo e mostra o shortest path entre dois vértices.
+
+grafo b = {
+  vertice a,b,c,d,e,f,g;
+  aresta (a>b, 5), (b>c), (c>d, 10), (d>e), (e>f), (f>g), (d>g);
+};
+
+b.caminho_mais_curto(a,g);
+b.imprime_caminho_mais_curto(a,g);

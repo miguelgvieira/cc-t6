@@ -1,0 +1,16 @@
+# TESTE 1
+# Criamos 2 grafos e desenhamos eles.
+
+grafo b = {
+  vertice a=10, b, c, d, e, f, g;
+  aresta (a>b, 5), (b>c), (c>d, 10), (d>e), (e>f), (f>g), (d>g);
+};
+
+b.remove_aresta((a>b));
+b.remove_aresta((c<b));
+b.remove_aresta((c>d));
+b.remove_vertice(a);
+b.remove_vertice(b);
+b.remove_vertice(c);
+
+imprime_grafo(b);

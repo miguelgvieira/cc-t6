@@ -1,0 +1,14 @@
+# CASO DE TESTE ERRO 2
+# Criamos um grafo, e tentamos adicionar uma nova aresta.
+# Irá lançar um erro por que um dos vértices da aresta não existe.
+
+grafo b = {
+  vertice a=10, b, c, d, e, f, g;
+  aresta (a>b, 5), (b>c), (c>d, 10), (d>e), (e>f), (f>g), (d>g);
+};
+
+b.adiciona_aresta((a>J));
+
+imprime_estrutura( b);
+
+imprime_grafo(b);

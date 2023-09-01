@@ -1,0 +1,13 @@
+# CASO DE TESTE ERRO 6
+# Tentamos remover uma aresta, mas ela não existe. Lança um erro sobre isso.
+
+grafo b = {
+  vertice a=10, b, c, d, e, f, g;
+  aresta (a>b, 5), (b>c), (c>d, 10), (d>e), (e>f), (f>g), (d>g);
+};
+
+b.remove_aresta((a<g));
+
+imprime_estrutura( b);
+
+imprime_grafo(b);

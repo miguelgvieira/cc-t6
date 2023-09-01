@@ -1,0 +1,33 @@
+# TESTE 1
+# O resultado são dois grafos que serão impressos a estrutura e mostrará na tela o resultado.
+
+grafo b = {
+  vertice a=10, b, c, d, e, f, g;
+  aresta (a>b, 5), (b>c), (c>d, 10), (d>e), (e>f), (f>g), (d>g);
+};
+
+grafo a;
+grafo c;
+
+a.adiciona_vertice(a);
+a.adiciona_vertice(b);
+a.adiciona_vertice(c);
+a.adiciona_vertice(d);
+a.adiciona_vertice(ae);
+a.adiciona_vertice(J);
+
+a.adiciona_aresta((a<b));
+a.adiciona_aresta((b<c));
+a.adiciona_aresta((a>b));
+a.adiciona_aresta((J<b));
+a.adiciona_aresta((c<d));
+a.adiciona_aresta((J<ae));
+c = a;
+
+
+imprime_estrutura( a);
+imprime_estrutura( b);
+
+imprime_grafo(a);
+imprime_grafo(b);
+imprime_grafo(c);

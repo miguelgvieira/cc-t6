@@ -3,10 +3,10 @@
 # Ele contém arestas com peso e sem pesos.
 
 grafo b = {
-  vertice a=10, b, c, d, e, f, g;
-  aresta (a>b, 5), (b>c), (c>d, 10), (d>e), (e>f), (f>g), (d>g);
+  vertice a=10, b=5, c=1, d=7, e=15, f=1, g=3;
+  aresta (a>b, 25), (a>c, 1), (c>d, 1), (d>e,1), (e>f,1), (f>b,1), (d>g,8);
 };
 
 imprime_estrutura( b);
 
-imprime_grafo(b);
+b.imprime_caminho_mais_curto(a, b);

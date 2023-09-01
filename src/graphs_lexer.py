@@ -49,9 +49,8 @@ class GraphsLexerAnalyzer():
     def write_code(self, code):
         self.output_stream.write(code + "\n")
 
-    def analyse_file(self, input_file, output_file):
+    def analyse_file(self, input_file):
         self.input_stream = FileStream(input_file, encoding='utf-8')
-        self.output_stream = open(output_file, 'w')
         self.la_lexer = grammarGraphsLanguageLexer(self.input_stream)
 
         # Aqui definimos o Parser do nosso compilador
@@ -63,5 +62,3 @@ class GraphsLexerAnalyzer():
 
         tree = self.parser.programa()
         graphs_semantico.visitPrograma(tree)
-
-        self.output_stream.close()

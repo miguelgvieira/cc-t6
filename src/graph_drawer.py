@@ -17,7 +17,6 @@ class GraphDrawer():
         self.add_nodes()
         self._draw()
 
-
     def _draw(self):
         pos = nx.spring_layout(self.nx_graph, seed=0)
 
@@ -56,7 +55,7 @@ class GraphDrawer():
         vertex1 = self._mount_weighted_node(vertex1)
         vertex2 = self._mount_weighted_node(vertex2)
         if weight is not None:
-            self.nx_graph.add_edge(vertex1, vertex2, weight=weight)
+            self.nx_graph.add_edge(vertex1, vertex2, weight=int(weight))
         else: 
             self.nx_graph.add_edge(vertex1, vertex2)
 
@@ -65,6 +64,7 @@ class GraphDrawer():
             if self.graph["vertex"][vertex]["weight"] is not None:
                 self.vertex_weights[vertex] = self.graph["vertex"][vertex]["weight"]
             self._add_node(vertex)
+        for vertex in self.graph["vertex"]:
             if len(self.graph["vertex"][vertex]["edges"]) > 0:
                 for edge in self.graph["vertex"][vertex]["edges"].values():
                     weight = edge["weight"]
@@ -75,8 +75,8 @@ class GraphDrawer():
         vertex1 = self._mount_weighted_node(vertex1)
         vertex2 = self._mount_weighted_node(vertex2)
         try:
-            if len(nx.shortest_path(self.nx_graph, vertex1, vertex2)) > 0:
-                return nx.shortest_path(self.nx_graph, vertex1, vertex2)
+            if len(nx.shortest_path(self.nx_graph, vertex1, vertex2, weight='weight')) > 0:
+                return nx.shortest_path(self.nx_graph, vertex1, vertex2, weight='weight')
 
         except nx.NetworkXNoPath:
             return None
@@ -99,6 +99,8 @@ class GraphDrawer():
         self._draw()
 
     def draw_shortest_path(self, vertex1, vertex2):
+        vertex1 = self._mount_weighted_node(vertex1)
+        vertex2 = self._mount_weighted_node(vertex2)
         shortest_path = self.shortest_path(vertex1, vertex2)
         if shortest_path is not None:
             self._draw_shortest_path(shortest_path)

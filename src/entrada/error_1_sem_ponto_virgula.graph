@@ -1,0 +1,11 @@
+# CASO DE TESTE ERRO 1
+# O programa vai lançar uma excessão por não ter um ; ao final de um comando.
+
+grafo b = {
+  vertice a=10, b, c, d, e, f, g;
+  aresta (a>b, 5), (b>c), (c>d, 10), (d>e), (e>f), (f>g), (d>g);
+}
+
+imprime_estrutura( b);
+
+imprime_grafo(b);

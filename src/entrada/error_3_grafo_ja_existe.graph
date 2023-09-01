@@ -1,0 +1,13 @@
+# CASO DE TESTE ERRO 3
+# Criamos um grafo. Depois tentamos criar outro, como ele já existe, lança um erro.
+
+grafo b = {
+  vertice a=10, b, c, d, e, f, g;
+  aresta (a>b, 5), (b>c), (c>d, 10), (d>e), (e>f), (f>g), (d>g);
+};
+
+grafo b;
+
+imprime_estrutura( b);
+
+imprime_grafo(b);
